@@ -33,3 +33,8 @@ app.get('/getcourses',function(req,res){
     res.send(courseList);
 })
 app.listen(3000);
+app.post('/addcourse',function(req,res){
+    console.log(req.body);
+    courseList.push(req.body);
+    res.send(courseList);
+})
